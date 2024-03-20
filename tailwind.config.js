@@ -13,13 +13,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        main: '#2563eb',
+        main: '#007dfc',
+        secondary: '#d64045',
         bgPrimary: '#fafafa',
         bgSecondary: '#e5e7eb',
         bgTertiary: '#d6d3d1',
         headingText: '#000000',
         bodyText: '#444444',
         placeholderText: '#888888',
+        bgDark: '#363636'
       }
     }
   },
