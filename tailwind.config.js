@@ -21,6 +21,7 @@ module.exports = {
         headingText: '#000000',
         bodyText: '#444444',
         placeholderText: '#888888',
+        secondaryWhite: 'rgba(255, 255, 255, 0.60)',
         bgDark: '#363636'
       }
     }

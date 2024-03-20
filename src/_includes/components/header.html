@@ -1,50 +1,71 @@
-<header class="z-50 top-0 bg-white shadow-lg">
-    <nav class="h-24" role="navigation">
-        <div class="custom-container mx-auto h-full">
-            <div class="flex justify-between items-center h-full">
-                <a href="/" aria-label="home" class="flex items-center">
-                    <img src="/assets/svgs/logo.svg" alt="logo" width="160" height="80" aria-hidden="true" decoding="async" />
-                </a>
-                <div class="lg:h-full">
-                    <!-- Mobile Navigation Open -->
-                    <button id="nav-open" class="lg:hidden" aria-label="open mobile menu">
-                        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </button>
-                    <div id="mobile-nav" class="fixed top-0 left-[-1100px] w-dvw h-dvh z-50 bg-main duration-300 lg:static lg:w-full lg:h-full lg:bg-transparent lg:duration-0">
-                        <!-- Mobile Navigation Close -->
-                        <div class="custom-container mx-auto flex flex-col items-end gap-4 mt-8 lg:h-full lg:mt-0">
-                            <button id="nav-close" class="lg:hidden" aria-label="close mobile menu">
-                                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>                  
-                            </button>
-                            <ul class="flex flex-col w-full gap-8 items-center text-2xl font-bold lg:h-full lg:gap-4 lg:flex-row lg:pr-0 lg:text-xl lg:font-normal">
-                                <li class="w-full border-b-2 border-black lg:border-none"><a href="/">Home</a></li>
-                                <li class="w-full border-b-2 border-black lg:border-none"><a href="/about">About</a></li>
-                                <li class="relative w-full lg:h-full">
-                                    <button id="services-menu-button" class="flex items-center w-full lg:h-full border-b-2 border-black lg:border-none" aria-haspopup="true" aria-expanded="false" aria-label="services">
-                                        <span>Services</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-auto" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                        </svg>                                          
-                                    </button>
-                                    <ul id="services-menu" class="flex flex-col gap-8 p-4 hidden lg:gap-4 lg:shadow-lg lg:absolute lg:top-24 lg:left-0 lg:bg-white lg:w-48">
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services">Our Services</a></li>
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-1">Service 1</a></li>
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-2">Service 2</a></li>
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-3">Service 3</a></li>
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-4">Service 4</a></li>
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-5">Service 5</a></li>
-                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-6">Service 6</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:py-3 lg:px-5 lg:bg-main lg:font-bold lg:hover:bg-black lg:hover:text-white lg:duration-300 lg:no-underline" href="/contact">Contact</a></li>
-                            </ul> 
+<header class="shadow-lg">
+    <nav class="flex flex-col" role="navigation">
+        <!-- Top Bar, smaller screens order last -->
+        <div class="custom-container mx-auto flex items-center justify-between py-4">
+            <a href="/" aria-label="home">
+                <img src="/assets/svgs/logo.svg" alt="logo" width="160" height="80" decoding="async" aria-hidden="true" />
+            </a>
+            <ul class="flex items-center gap-8">
+                <li>
+                    <a class="flex gap-4 group" href="mailto:{{ client.email }}">
+                        <div class="bg-secondary p-4 group-hover:bg-main" aria-hidden="true">
+                            <img src="/assets/svgs/mail-white.svg" alt="mail icon" width="24" height="24" decoding="async" />
                         </div>
-                    </div>                  
-                </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-black font-bold">Send A Message</span>
+                            <span class="text-black group-hover:underline">{{ client.email }}</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex gap-4 group" href="tel:{{ client.phoneForTel }}">
+                        <div class="bg-secondary p-4 group-hover:bg-main" aria-hidden="true">
+                            <img src="/assets/svgs/phone-white.svg" alt="phone icon" width="24" height="24" decoding="async" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-black font-bold">Contact 24/7</span>
+                            <span class="text-black group-hover:underline">{{ client.phoneForTel }}</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex gap-4 group" href="tel:{{ client.address.mapLink}}">
+                        <div class="bg-secondary p-4 group-hover:bg-main" aria-hidden="true">
+                            <img src="/assets/svgs/location-white.svg" alt="location icon" width="24" height="24" decoding="async" />
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-black font-bold">Visit Us At</span>
+                            <span class="text-black group-hover:underline">{{ client.address.city }}, {{ client.address.province }}</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-bgDark">
+            <div class="custom-container mx-auto flex items-center justify-between">
+                <ul class="flex gap-8 text-white items-center">
+                    <li class="uppercase hover:text-secondaryWhite"><a href="/">Home</a></li>
+                    <li class="relative py-8">
+                        <button id="services-menu-button" class="flex items-center w-full border-b-2 border-black lg:border-none" aria-haspopup="true" aria-expanded="false" aria-label="services">
+                            <span class="uppercase">Services</span>
+                            <img src="/assets/svgs/down-chevron.svg" alt="down icon" width="24" height="24" decoding="async" aria-hidden="true" />                             
+                        </button>
+                        <ul id="services-menu" class="flex flex-col gap-8 p-4 hidden lg:gap-4 lg:shadow-lg lg:absolute lg:top-20 lg:left-0 lg:bg-bgDark lg:w-48">
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services">Our Services</a></li>
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-1">Service 1</a></li>
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-2">Service 2</a></li>
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-3">Service 3</a></li>
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-4">Service 4</a></li>
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-5">Service 5</a></li>
+                            <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-6">Service 6</a></li>
+                        </ul>
+                    </li>
+                    <li class="uppercase hover:text-secondaryWhite"><a href="/about">About Us</a></li>
+                    <li class="uppercase hover:text-secondaryWhite"><a href="/portfolio">Our Work</a></li>
+                    <li class="uppercase hover:text-secondaryWhite"><a href="/reviews">Reviews</a></li>
+                </ul>
+                <a class="bg-main font-bold text-white py-3 px-5 hover:bg-secondary" href="/contact">Schedule Appointment</a>
             </div>
         </div>
     </nav>
