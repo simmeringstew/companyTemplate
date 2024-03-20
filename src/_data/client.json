@@ -1,0 +1,21 @@
+{
+  "name": "Client Site",
+  "email": "client.email@email.com",
+  "phoneForTel": "123-456-7890",
+  "phoneFormatted": "(123) 456-7890",
+  "address": {
+      "lineOne": "First Address Line",
+      "lineTwo": "Second Address Line",
+      "city": "City",
+      "province": "PR",
+      "postalCode": "H0H 0H0",
+      "mapLink": "https://maps.app.goo.gl/ovHL9oyXToZmeYE1A"
+  },
+  "socials": {
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#",
+    "tiktok": "#"
+  },
+  "domain": "https://www.clientsite.com"
+}

@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+      scroll-behavior: smooth;
+      scroll-padding-top: 3rem;
+    }
+  }
+  html {
+    hanging-punctuation: first last;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    color: #000000;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  .custom-container {
+    width: 92%;
+    max-width: 80rem;
+  }
+  .background-image:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
