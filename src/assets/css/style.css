@@ -36,4 +36,9 @@
     z-index: 1;
     pointer-events: none;
   }
+  @media screen and (min-width: 1025px) {
+    nav ul li:hover ul {
+      display: flex;
+    }
+  }
 }

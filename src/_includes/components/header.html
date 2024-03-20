@@ -1,10 +1,9 @@
-<header class="sticky z-50 top-0 bg-white dark:bg-darkSecondary shadow-lg dark:shadow-none">
+<header class="z-50 top-0 bg-white shadow-lg">
     <nav class="h-24" role="navigation">
         <div class="custom-container mx-auto h-full">
             <div class="flex justify-between items-center h-full">
                 <a href="/" aria-label="home" class="flex items-center">
-                    <img class="h-12 w-12 mr-4" src="/assets/svgs/logo.svg" alt="logo" width="80" height="80" aria-hidden="true" decoding="async" />
-                    <span class="font-bold text-xl" aria-hidden="true">Pinewood Dental</span>
+                    <img src="/assets/svgs/logo.svg" alt="logo" width="160" height="80" aria-hidden="true" decoding="async" />
                 </a>
                 <div class="lg:h-full">
                     <!-- Mobile Navigation Open -->
@@ -13,48 +12,35 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
-                    <div id="mobile-nav" class="fixed top-0 left-[-1100px] w-dvw h-dvh z-50 bg-main dark:bg-darkSecondary duration-300 lg:static lg:w-full lg:h-full lg:bg-transparent lg:dark:bg-transparent lg:duration-0">
+                    <div id="mobile-nav" class="fixed top-0 left-[-1100px] w-dvw h-dvh z-50 bg-main duration-300 lg:static lg:w-full lg:h-full lg:bg-transparent lg:duration-0">
                         <!-- Mobile Navigation Close -->
-                        <div class="custom-container mx-auto flex flex-col items-end gap-4 dark:text-darkText mt-8 lg:h-full lg:mt-0">
+                        <div class="custom-container mx-auto flex flex-col items-end gap-4 mt-8 lg:h-full lg:mt-0">
                             <button id="nav-close" class="lg:hidden" aria-label="close mobile menu">
                                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                                 </svg>                  
                             </button>
                             <ul class="flex flex-col w-full gap-8 items-center text-2xl font-bold lg:h-full lg:gap-4 lg:flex-row lg:pr-0 lg:text-xl lg:font-normal">
-                                <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/">Home</a></li> 
+                                <li class="w-full border-b-2 border-black lg:border-none"><a href="/">Home</a></li>
+                                <li class="w-full border-b-2 border-black lg:border-none"><a href="/about">About</a></li>
                                 <li class="relative w-full lg:h-full">
-                                    <button id="about-menu-button" class="flex items-center w-full border-b-2 border-black dark:border-darkText lg:h-full lg:border-none lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" aria-haspopup="true" aria-expanded="false" aria-label="about">
-                                        <span>About</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-auto" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                        </svg>                                          
-                                    </button>
-                                    <ul id="about-menu" class="flex flex-col gap-8 p-4 hidden lg:gap-4 lg:shadow-lg lg:absolute lg:top-24 lg:left-0 lg:bg-white lg:rounded-b lg:w-48 dark:lg:bg-darkSecondary dark:shadow-none">
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/about">About Us</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/about/our-dentists">Our Dentists</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/about/about-2">About 2</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/about/about-3">About 3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="relative w-full lg:h-full">
-                                    <button id="services-menu-button" class="flex items-center w-full lg:h-full border-b-2 border-black dark:border-darkText lg:border-none lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" aria-haspopup="true" aria-expanded="false" aria-label="services">
+                                    <button id="services-menu-button" class="flex items-center w-full lg:h-full border-b-2 border-black lg:border-none" aria-haspopup="true" aria-expanded="false" aria-label="services">
                                         <span>Services</span>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-auto" aria-hidden="true">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                         </svg>                                          
                                     </button>
-                                    <ul id="services-menu" class="flex flex-col gap-8 p-4 hidden lg:gap-4 lg:shadow-lg lg:absolute lg:top-24 lg:left-0 lg:bg-white lg:rounded-b lg:w-48 dark:lg:bg-darkSecondary dark:shadow-none">
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services">Our Services</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services/service-1">Service 1</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services/service-2">Service 2</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services/service-3">Service 3</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services/service-4">Service 4</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services/service-5">Service 5</a></li>
-                                        <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary lg:dark:hover:text-darkTextSecondary" href="/services/service-6">Service 6</a></li>
+                                    <ul id="services-menu" class="flex flex-col gap-8 p-4 hidden lg:gap-4 lg:shadow-lg lg:absolute lg:top-24 lg:left-0 lg:bg-white lg:w-48">
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services">Our Services</a></li>
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-1">Service 1</a></li>
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-2">Service 2</a></li>
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-3">Service 3</a></li>
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-4">Service 4</a></li>
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-5">Service 5</a></li>
+                                        <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:decoration-main lg:hover:text-textSecondary" href="/services/service-6">Service 6</a></li>
                                     </ul>
                                 </li>
-                                <li class="w-full border-b-2 border-black dark:border-darkText lg:border-none"><a class="lg:py-3 lg:px-5 lg:bg-main lg:rounded lg:font-bold lg:hover:bg-black lg:dark:hover:bg-white lg:hover:text-white lg:dark:hover:text-darkMain lg:dark:text-darkMain lg:duration-300 lg:no-underline" href="/contact">Contact</a></li>
+                                <li class="w-full border-b-2 border-black lg:border-none"><a class="lg:py-3 lg:px-5 lg:bg-main lg:font-bold lg:hover:bg-black lg:hover:text-white lg:duration-300 lg:no-underline" href="/contact">Contact</a></li>
                             </ul> 
                         </div>
                     </div>                  
