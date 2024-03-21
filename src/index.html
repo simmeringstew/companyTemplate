@@ -1,12 +1,29 @@
 ---
 title: 'Client Site'
 description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.webp'
+preloadImg: '/assets/svgs/landing.svg'
 permalink: '/'
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block body %}
-
+    <!-- Hero -->
+    <section>
+        <div class="bg-secondaryLight">
+            <div class="custom-container mx-auto pt-16 gap-16 lg:pt-24 flex flex-col lg:flex-row lg:justify-between items-center">
+                <div class="flex flex-col">
+                    <span class="uppercase text-main font-bold text-2xl">Tools for Your Small Business</span>
+                    <h1 class="font-bold text-6xl mb-4">Ipsum Collaboration</h1>
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolorem dicta nisi. Cumque repudiandae soluta eum reprehenderit vitae incidunt quam?</p>
+                    <div class="flex flex-col md:flex-row items-center lg:items-start gap-8 text-2xl text-center xs:text-lg">
+                        <a class="w-80 py-5 px-8 uppercase bg-main outline outline-2 outline-main hover:outline-secondary font-bold text-white hover:bg-secondary" href="/services">What We Offer</a>
+                        <a class="w-80 py-5 px-8 uppercase outline outline-2 outline-black font-bold text-black hover:bg-black hover:text-white" href="/contact">Get in Touch</a>
+                    </div>
+                </div>
+                <img src="/assets/svgs/landing.svg" width="500" height="500" alt="people visualizing data" loading="eager" decoding="async" aria-hidden="true" />
+            </div>
+        </div>
+        <img src="/assets/svgs/wave-top.svg" width="2500" height="300" alt="wave" decoding="async" aria-hidden="true" />
+    </section>
 {% endblock %}
