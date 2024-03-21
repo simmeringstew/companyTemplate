@@ -5,7 +5,11 @@
             <a href="/" aria-label="home">
                 <img src="/assets/svgs/logo.svg" alt="logo" width="160" height="80" decoding="async" aria-hidden="true" />
             </a>
-            <ul class="flex items-center gap-8">
+            <!-- Mobile Navigation Open -->
+            <button id="nav-open" class="lg:hidden" aria-label="open mobile menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            </button>
+            <ul class="hidden lg:flex items-center gap-8">
                 <li>
                     <a class="flex gap-4 group" href="mailto:{{ client.email }}">
                         <div class="bg-secondary p-4 group-hover:bg-main" aria-hidden="true">
@@ -42,16 +46,19 @@
             </ul>
         </div>
         <!-- Bottom Bar -->
-        <div class="bg-bgDark">
-            <div class="custom-container mx-auto flex items-center justify-between">
-                <ul class="flex gap-8 text-white items-center">
+        <div id="mobile-nav" class="fixed bg-bgDark top-0 left-[-1100px] w-dvw h-dvh z-50 duration-300 lg:static lg:w-auto lg:h-auto lg:duration-0">
+            <div class="custom-container mx-auto flex flex-col gap-8 items-center justify-between py-4 lg:flex-row lg:py-0">
+                <button id="nav-close" class="lg:hidden text-white self-end" aria-label="close mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>                  
+                </button>
+                <ul class="w-full flex flex-col gap-8 text-white lg:w-auto lg:flex-row lg:items-center">
                     <li class="uppercase hover:text-secondaryWhite"><a href="/">Home</a></li>
-                    <li class="relative py-8">
-                        <button id="services-menu-button" class="flex items-center w-full border-b-2 border-black lg:border-none" aria-haspopup="true" aria-expanded="false" aria-label="services">
+                    <li class="relative lg:py-8">
+                        <button id="services-menu-button" class="flex items-center" aria-haspopup="true" aria-expanded="false" aria-label="services">
                             <span class="uppercase">Services</span>
                             <img src="/assets/svgs/down-chevron.svg" alt="down icon" width="24" height="24" decoding="async" aria-hidden="true" />                             
                         </button>
-                        <ul id="services-menu" class="flex flex-col gap-8 p-4 hidden lg:gap-4 lg:shadow-lg lg:absolute lg:top-20 lg:left-0 lg:bg-bgDark lg:w-48">
+                        <ul id="services-menu" class="flex flex-col gap-8 px-4 mt-4 hidden lg:mt-0 lg:py-4 lg:gap-4 lg:shadow-lg lg:absolute lg:top-20 lg:left-0 lg:bg-bgDark lg:w-48">
                             <li class="uppercase hover:text-secondaryWhite"><a href="/services">Our Services</a></li>
                             <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-1">Service 1</a></li>
                             <li class="uppercase hover:text-secondaryWhite"><a href="/services/service-2">Service 2</a></li>
@@ -65,7 +72,7 @@
                     <li class="uppercase hover:text-secondaryWhite"><a href="/portfolio">Our Work</a></li>
                     <li class="uppercase hover:text-secondaryWhite"><a href="/reviews">Reviews</a></li>
                 </ul>
-                <a class="bg-main font-bold text-white py-3 px-5 hover:bg-secondary" href="/contact">Schedule Appointment</a>
+                <a class="w-full text-center bg-main font-bold text-white py-3 px-5 hover:bg-secondary lg:w-auto" href="/contact">Schedule Appointment</a>
             </div>
         </div>
     </nav>
