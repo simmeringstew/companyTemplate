@@ -3,7 +3,10 @@
         <!-- Top Bar, smaller screens order last -->
         <div class="custom-container mx-auto flex items-center justify-between py-4">
             <a href="/" aria-label="home">
-                <img src="/assets/svgs/logo.svg" alt="logo" width="160" height="80" decoding="async" aria-hidden="true" />
+                <picture>
+                    <source media="(max-width: 1025px)" srcset="/assets/svgs/logo-white.svg">
+                    <img src="/assets/svgs/logo.svg" alt="logo" width="160" height="80" decoding="async" aria-hidden="true" />
+                </picture>
             </a>
             <!-- Mobile Navigation Open -->
             <button id="nav-open" class="lg:hidden text-white" aria-label="open mobile menu">
