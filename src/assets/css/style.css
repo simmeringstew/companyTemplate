@@ -36,6 +36,17 @@
     z-index: 1;
     pointer-events: none;
   }
+  /* for straight lines between items */
+  .stat::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #d64045;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  /* for hover navigation */
   @media screen and (min-width: 1025px) {
     nav ul li:hover ul {
       display: flex;
