@@ -7,6 +7,10 @@ permalink: '/'
 
 {% extends "layouts/base.html" %}
 
+{% block head %}
+    <script defer src="/assets/js/pricing.js"></script>
+{% endblock %}
+
 {% block body %}
     <!-- Hero -->
     <section class="bg-mainLight">
@@ -53,4 +57,6 @@ permalink: '/'
     {% include "components/works-you.html" %}
 
     {% include "components/mission-vision.html" %}
+
+    {% include "components/pricing.html" %}
 {% endblock %}
