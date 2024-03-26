@@ -60,6 +60,51 @@ permalink: '/'
 
     {% include "components/side-by-side-stats.html" %}
 
+    <section class="mb-32 lg:mb-48">
+        <div class="custom-container mx-auto flex flex-col gap-8">
+            <div class="flex flex-col gap-4 lg:w-1/2">
+                <span class="uppercase text-main font-bold text-2xl">Testemonials</span>
+                <h2 class="font-bold text-5xl">Happy Customer Feedback on Our Work</h2>
+            </div>
+            <ul class="flex flex-col gap-24 pt-16 lg:flex-row lg:gap-8">
+                <li class="border-2 border-black">
+                    <div class="relative p-8 bg-white flex flex-col gap-4">
+                        <img class="rounded-full absolute -top-16 left-4" src="/assets/images/review-1.webp" alt="John Doe" width="128" height="128" decoding="async" loading="lazy" />
+                        <img class="self-end" src="/assets/svgs/chat-bubbles.svg" alt="chat icon" width="64" height="64" decoding="async" loading="lazy" aria-hidden="true" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quae repellendus veritatis ut eaque animi est dolores modi officia officiis?</p>
+                    </div>
+                    <div class="bg-black p-8 flex flex-col gap-4 items-center">
+                        <span class="font-bold text-white text-3xl">John Doe</span>
+                        <span class="text-white text-xl">Senior Execuitive</span>
+                    </div>
+                </li>
+                <li class="border-2 border-black">
+                    <div class="relative p-8 bg-white flex flex-col gap-4">
+                        <img class="rounded-full absolute -top-16 left-4" src="/assets/images/review-2.webp" alt="Jane Doe" width="128" height="128" decoding="async" loading="lazy" />
+                        <img class="self-end" src="/assets/svgs/chat-bubbles.svg" alt="chat icon" width="64" height="64" decoding="async" loading="lazy" aria-hidden="true" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quae repellendus veritatis ut eaque animi est dolores modi officia officiis?</p>
+                    </div>
+                    <div class="bg-black p-8 flex flex-col gap-4 items-center">
+                        <span class="font-bold text-white text-3xl">Jane Doe</span>
+                        <span class="text-white text-xl">Senior Analyst</span>
+                    </div>
+                </li>
+                <li class="border-2 border-black">
+                    <div class="relative p-8 bg-white flex flex-col gap-4">
+                        <img class="rounded-full absolute -top-16 left-4" src="/assets/images/review-3.webp" alt="Jane Doe" width="128" height="128" decoding="async" loading="lazy" />
+                        <img class="self-end" src="/assets/svgs/chat-bubbles.svg" alt="chat icon" width="64" height="64" decoding="async" loading="lazy" aria-hidden="true" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quae repellendus veritatis ut eaque animi est dolores modi officia officiis?</p>
+                    </div>
+                    <div class="bg-black p-8 flex flex-col gap-4 items-center">
+                        <span class="font-bold text-white text-3xl">Jane Doe</span>
+                        <span class="text-white text-xl">Owner/Founder</span>
+                    </div>
+                </li>
+            </ul>
+            <a class="w-64 py-5 px-8 self-end text-center text-xl uppercase bg-main font-bold text-white hover:bg-secondary" href="/reviews">More Reviews</a>
+        </div>
+    </section>
+
     {% include "components/pricing.html" %}
 
     {% include "components/cta.html" %}
